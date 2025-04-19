@@ -20,7 +20,7 @@ jobs:
 
       - name: Deploy to EC2
         run: |
-          ssh -o StricHostKeyChecking=no ubuntu@13.210.213.31 << 'EOF'
+          ssh -o StrictHostKeyChecking=no ubuntu@13.210.213.31 << 'EOF'
             cd /var/www/html/belajar-nextjs
             git pull origin master
             # Restart Nginx or any other service if needed
