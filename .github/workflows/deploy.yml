@@ -22,7 +22,8 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@13.210.213.31 << 'EOF'
             cd /var/www/html/belajar-nextjs
-            git pull origin master
+            sudo git pull origin master
+            sudo npm run build
             # Restart Nginx or any other service if needed
             sudo systemctl restart nginx
             pm2 restart my-next-app
